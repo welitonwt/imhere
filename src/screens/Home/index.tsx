@@ -36,9 +36,9 @@ export function Home() {
           
       </View>
 
-      <Participant />
-      <Participant />
-      <Participant />
+      <Participant name='Weliton' idade='29' />
+      <Participant name='Karine' idade='27'/>
+      <Participant name='Karol' idade='23'/>
 
 
     </View>
