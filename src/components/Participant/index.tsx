@@ -5,20 +5,21 @@ import { styles } from './styles'
 type Props = {
   name: string,
   idade: string
+  onRemove: () => void
 }
 
-export function Participant( props : Props ) {
+export function Participant( {name, idade, onRemove} : Props ) {
   return (
     <View style={styles.container}>
       <Text style={styles.name}>
-        { props.name }
+        { name }
       </Text>
       <Text style={styles.name}>
         Idade &nbsp;
-        { props.idade }
+        { idade }
       </Text>
       <TouchableOpacity
-          style={styles.buttonContainer}
+          style={styles.buttonContainer} onPress={onRemove}
         >
           <Text 
             style={styles.buttonText}
