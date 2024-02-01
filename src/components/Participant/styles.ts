@@ -13,14 +13,14 @@ export const styles = StyleSheet.create({
   name: {
     flex: 1,
     color: '#FFFFFF',
-    fontSize: 16,
+    fontSize: 24,
     marginLeft: 16
   },
 
   buttonContainer:{
     backgroundColor: '#E23C44',
-    width: 40,
-    height: 40,
+    width: 50,
+    height: 50,
     borderRadius: 5,
     alignItems: 'center',
     justifyContent: 'center'
