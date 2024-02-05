@@ -1,26 +1,11 @@
 import { Text, View, TextInput, TouchableOpacity, FlatList, Alert } from 'react-native'
 import { styles } from './styles'
 import { Participant } from '../../components/Participant'
+import React, { useState } from 'react'
 
 export function Home() {
-  const participants = [
-    'Weliton',
-    'Luiz',
-    'Edilene',
-    'Laisa',
-    'Gil',
-    'karine',
-    'Karol',
-    'Bruno',
-    'Luis',
-    'Joyce',
-    'Leide',
-    'Bruna',
-    'Fabiana',
-    'Fatima',
-    'Alice'
-  ]
-
+  const [participants, setParticipants] = useState(['Davi'])
+  
     function handleParticipantAdd(){
       if(participants.includes('Weliton')) {
       return Alert.alert(
@@ -28,8 +13,7 @@ export function Home() {
           'Ja existe um participante na lista com esse nome')
       }
 
-      console.log('Voce Chegou aqui')
-
+      setParticipants( state => [...state, 'Karine'])
     }
 
     function handleParticipantRemove(name: string){
@@ -43,7 +27,6 @@ export function Home() {
           style: 'cancel'
         }
       ])
-      console.log(`Voce deletou o participante ${name}`)
     }
 
   return (
